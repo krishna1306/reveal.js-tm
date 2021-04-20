@@ -62,12 +62,71 @@
 			background-color: #00647a;
 			color: #d4f7ff;
 		}
+
+		.button4 {
+			background-color: white;
+			color: black;
+			font-size: 20px;
+			border: 2px solid #3333ff;
+		}
+
+		.button4:hover {
+			background-color: #3333ff;
+			color: #ccccff;
+		}
+
+		.button5 {
+			background-color: white;
+			color: black;
+			font-size: 20px;
+			border: 2px solid #ff00ff;
+		}
+
+		.button5:hover {
+			background-color: #ff00ff;
+			color: #ffccff;
+		}
+
+		.button6 {
+			background-color: white;
+			color: black;
+			font-size: 20px;
+			border: 2px solid #e6b800;
+		}
+
+		.button6:hover {
+			background-color: #e6b800;
+			color: #ffffcc;
+		}
+
+
 	</style>
 </head>
 
 <body>
 	<div class="reveal">
 		<div class="slides">
+
+			<section>
+				<h3>Auto Timer ⏱️</h3>
+				<p style="font-size: 30px;"> 📌 Timing Signals 🚦</p>
+				<canvas id="myCanvas-1" width="600" height="300" style="border:1px solid #ffffff;">
+					Your browser does not support the HTML5 canvas tag.</canvas>
+				<div class="btn-group">
+					<button onclick="show_green()" class="button button1">Green</button>
+					<button onclick="show_yellow()" class="button button6">Yellow</button>
+					<button onclick="show_red()" class="button button2">Red</button>
+					<button onclick="ring_button()" class="button button5"> 🛎</button>
+				</div>
+				<div class="btn-group">
+					<button onclick="show_5to7()" class="button button4">5to7</button>
+					<button onclick="show_4to6()" class="button button4">4to6</button>
+					<button onclick="show_2to3()" class="button button4">2to3</button>
+					<button onclick="show_1to2()" class="button button4">1to2</button>
+				</div>
+				<p id="timing-info" style="font-size: 30px;"></p>
+			</section>
+
 			<section>
 				<h3>Auto Timer ⏱️</h3>
 				<p style="font-size: 30px;"> 🎙 Regular Speech 🚦5/6/7🚦 </p>
@@ -107,6 +166,19 @@
 				<p id="elapsed_eval" style="font-size: 30px;"></p>
 			</section>
 
+			<section>
+				<h3>Auto Timer ⏱️</h3>
+				<p style="font-size: 30px;"> 🏓 Table Topics 📮 🚦1/1.5/2🚦 </p>
+				<canvas id="myCanvas4" width="800" height="400" style="border:1px solid #ffffff;">
+					Your browser does not support the HTML5 canvas tag.</canvas>
+				<div class="btn-group">
+					<button onclick="start_tt(1,1.5,2,2.5)" class="button button1">Start</button>
+					<button onclick="stop_tt()" class="button button3">Stop</button>
+					<button onclick="reset_tt()" class="button button2">Reset</button>
+				</div>
+				<p id="elapsed_tt" style="font-size: 30px;"></p>
+			</section>
+
 		</div>
 	</div>
 
@@ -117,6 +189,8 @@
 	<script src="timer_scripts/regular_speaker.js"></script>
 	<script src="timer_scripts/icebreaker.js"></script>
 	<script src="timer_scripts/evaluator.js"></script>
+	<script src="timer_scripts/table-topics.js"></script>
+	<script src="timer_scripts/instructions.js"></script>
 	<!-- <script>
 
 		var t0 = 0;
